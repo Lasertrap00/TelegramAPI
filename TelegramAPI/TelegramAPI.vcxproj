@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D60399FF-A9AE-4278-ABC2-76A95B1A4871}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TelegramAPI</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\boost\boost_1_62_0;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\OpenSSL-Win32\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>C:\OpenSSL-Win32\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\boost\boost_1_62_0;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\tgbot\Api.h" />
+    <ClInclude Include="include\tgbot\Bot.h" />
+    <ClInclude Include="include\tgbot\EventBroadcaster.h" />
+    <ClInclude Include="include\tgbot\EventHandler.h" />
+    <ClInclude Include="include\tgbot\net\HttpClient.h" />
+    <ClInclude Include="include\tgbot\net\HttpParser.h" />
+    <ClInclude Include="include\tgbot\net\HttpReqArg.h" />
+    <ClInclude Include="include\tgbot\net\HttpServer.h" />
+    <ClInclude Include="include\tgbot\net\TgLongPoll.h" />
+    <ClInclude Include="include\tgbot\net\TgWebhookLocalServer.h" />
+    <ClInclude Include="include\tgbot\net\TgWebhookServer.h" />
+    <ClInclude Include="include\tgbot\net\TgWebhookTcpServer.h" />
+    <ClInclude Include="include\tgbot\net\Url.h" />
+    <ClInclude Include="include\tgbot\tgbot.h" />
+    <ClInclude Include="include\tgbot\TgException.h" />
+    <ClInclude Include="include\tgbot\TgTypeParser.h" />
+    <ClInclude Include="include\tgbot\tools\StringTools.h" />
+    <ClInclude Include="include\tgbot\types\Audio.h" />
+    <ClInclude Include="include\tgbot\types\CallbackQuery.h" />
+    <ClInclude Include="include\tgbot\types\Chat.h" />
+    <ClInclude Include="include\tgbot\types\ChosenInlineResult.h" />
+    <ClInclude Include="include\tgbot\types\Contact.h" />
+    <ClInclude Include="include\tgbot\types\Document.h" />
+    <ClInclude Include="include\tgbot\types\ForceReply.h" />
+    <ClInclude Include="include\tgbot\types\GenericReply.h" />
+    <ClInclude Include="include\tgbot\types\InlineKeyboardButton.h" />
+    <ClInclude Include="include\tgbot\types\InlineKeyboardMarkup.h" />
+    <ClInclude Include="include\tgbot\types\InlineQuery.h" />
+    <ClInclude Include="include\tgbot\types\InlineQueryResult.h" />
+    <ClInclude Include="include\tgbot\types\InlineQueryResultArticle.h" />
+    <ClInclude Include="include\tgbot\types\InlineQueryResultGif.h" />
+    <ClInclude Include="include\tgbot\types\InlineQueryResultMpeg4Gif.h" />
+    <ClInclude Include="include\tgbot\types\InlineQueryResultPhoto.h" />
+    <ClInclude Include="include\tgbot\types\InlineQueryResultVideo.h" />
+    <ClInclude Include="include\tgbot\types\InputFile.h" />
+    <ClInclude Include="include\tgbot\types\Location.h" />
+    <ClInclude Include="include\tgbot\types\Message.h" />
+    <ClInclude Include="include\tgbot\types\MessageEntity.h" />
+    <ClInclude Include="include\tgbot\types\PhotoSize.h" />
+    <ClInclude Include="include\tgbot\types\ReplyKeyboardHide.h" />
+    <ClInclude Include="include\tgbot\types\ReplyKeyboardMarkup.h" />
+    <ClInclude Include="include\tgbot\types\Sticker.h" />
+    <ClInclude Include="include\tgbot\types\Update.h" />
+    <ClInclude Include="include\tgbot\types\User.h" />
+    <ClInclude Include="include\tgbot\types\UserProfilePhotos.h" />
+    <ClInclude Include="include\tgbot\types\Venue.h" />
+    <ClInclude Include="include\tgbot\types\Video.h" />
+    <ClInclude Include="include\tgbot\types\Voice.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Api.cpp" />
+    <ClCompile Include="src\net\HttpClient.cpp" />
+    <ClCompile Include="src\net\HttpParser.cpp" />
+    <ClCompile Include="src\net\TgLongPoll.cpp" />
+    <ClCompile Include="src\net\Url.cpp" />
+    <ClCompile Include="src\TgException.cpp" />
+    <ClCompile Include="src\TgTypeParser.cpp" />
+    <ClCompile Include="src\tools\StringTools.cpp" />
+    <ClCompile Include="src\types\InlineQueryResult.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
